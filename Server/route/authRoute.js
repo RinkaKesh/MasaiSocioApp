@@ -65,7 +65,7 @@ authRoute.post("/login", async (req, res) => {
         res.cookie("refresh-Token", refreshToken);
   
         res.status(200).send({ message:`${user.name} Logged in successfully`,accessToken, refreshToken });
-        console.log("Logged in");
+        // console.log("Logged in");
       } else {
         console.log("Wrong credentials");
         res.status(401).send({ error: "Wrong credentials" });
