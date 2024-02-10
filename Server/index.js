@@ -4,6 +4,8 @@ const app=express();
 app.use(express.json());
 require("dotenv").config();
 const PORT=process.env.port;
+const {authRoute}=require("./route/authRoute.js")
+app.use("/users",authRoute)
 
 
 
