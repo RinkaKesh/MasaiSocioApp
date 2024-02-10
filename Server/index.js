@@ -6,6 +6,8 @@ require("dotenv").config();
 const PORT=process.env.port;
 const {authRoute}=require("./route/authRoute.js")
 app.use("/users",authRoute)
+const {postRoute}=require("./route/postRoute.js")
+app.use("/posts",postRoute)
 
 
 

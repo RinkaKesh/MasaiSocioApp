@@ -4,6 +4,8 @@ const postSchema=mongoose.Schema({
     title:{type:String,required:true},
     body:{type:String,required:true,unique:true},
     device:{type:String,required:true,unique:true},
+    userId:{type:String,required:true},
+    user:{type:String,required:true}
     
 },{versionKey:false})
 

@@ -3,7 +3,7 @@ require("dotenv").config()
 const jwt = require('jsonwebtoken');
 const { TokenModel } = require('../model/tokenModel.js');
 
-const auth = async (req, res, next) => {
+const authentication = async (req, res, next) => {
   
   try {
     const accessToken = req.cookies["access-Token"];
