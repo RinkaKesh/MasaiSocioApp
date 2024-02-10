@@ -12,8 +12,12 @@ function App() {
   return (
     <>
     <div style={{display:'flex',justifyContent:"space-around"}}>
-      <Link to="/login">SignIn</Link>
+      {/* <Link to="/login">SignIN</Link> */}
+      <Link to="/">Home</Link>
       <Link to="/register">SignUp</Link>
+      <Link to="/login">SignIn</Link>
+      <Link to="/posts">Posts</Link>
+
       
     </div>
 

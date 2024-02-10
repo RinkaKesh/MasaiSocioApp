@@ -1,7 +1,7 @@
 const express=require("express");
 const authRoute=express.Router();
 require("dotenv").config();
-// const cookieParser=require("cookie-parser")
+const cookieParser=require("cookie-parser")
 const {UserModel}=require("../model/userModel");
 const jwt =require("jsonwebtoken")
 const bcrypt=require("bcrypt")

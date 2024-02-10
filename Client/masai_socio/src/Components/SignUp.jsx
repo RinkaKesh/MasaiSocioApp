@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [errorMessage, setErrorMessage] = useState('');
@@ -7,7 +9,8 @@ const SignUp = () => {
       const [formData,setformData]=useState({
           email:"",
           name:"",
-          password:""
+          password:"",
+          gender:""
       })
   
       const handleChange=(e)=>{
@@ -29,7 +32,8 @@ const SignUp = () => {
               setformData({
                 email:"",
                 name:"",
-                password:""
+                password:"",
+                gender:""
               })
             }
           } catch (error) {
@@ -61,12 +65,14 @@ const SignUp = () => {
           <input placeholder='email' type='email' name='email' onChange={handleChange} value={formData.email}></input>
           <input placeholder='name' type='text' name='name' onChange={handleChange} value={formData.name}></input>
           <input placeholder='password' type='password' name='password' onChange={handleChange} value={formData.password}></input>
+          <input placeholder='gender' type='text' name='gender' onChange={handleChange} value={formData.gender}></input>
+
           <input type="Submit" />
           </form>
       </div>
     )
   }
   
-}
+
 
 export default SignUp
