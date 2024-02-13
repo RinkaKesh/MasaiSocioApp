@@ -21,7 +21,7 @@ const SignUp = () => {
       const handleSubmit = async (e) => {
           e.preventDefault();
           try {
-            const res = await axios.post("http://localhost:3000/users/register", formData, { withCredentials: true });
+            const res = await axios.post("http://localhost:8000/users/register", formData, { withCredentials: true });
             if (res.status === 200) {
               console.log(res.data.message)
               setSignupText(res.data.message);
